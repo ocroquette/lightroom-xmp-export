@@ -1,8 +1,21 @@
 # lightroom-xmp-export
 
-This Lightroom plugin will extend the XMP files written by Digikam with the keywords from the Lightroom database.
+This Lightroom plugin will extend the XMP files written by Digikam with the data from the Lightroom database.
+
+This is particularly useful to transfer metadata of video files, since Lightroom doesn't write XMP files for them.
+
+The following metadata is supported:
+- keywords
+- city
+- province/state
+- location
+- country (the country code needs to be set in Lightroom though to be imported correctly in Digikam)
+
+# Author
 
 Olivier Croquette ocroquette@free.fr
+
+See also https://ocroquette.wordpress.com/migrating-from-lightroom-6-to-digikam-7/
 
 # Versions used for development
 

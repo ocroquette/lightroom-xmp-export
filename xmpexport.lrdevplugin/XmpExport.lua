@@ -71,6 +71,27 @@ local function updateXmpFiles()
                             table.insert (arr, "<rdf:li>" .. keyword_fullpath .. "</rdf:li>")
                           end
                     end
+
+                    if string.match(line, "photoshop:City=\".*\"") then
+                        table.remove(arr)
+                        table.insert (arr, "photoshop:City=\"" .. photo:getFormattedMetadata("city") .. "\"")
+                    end
+                    if string.match(line, "Iptc4xmpCore:Location=\".*\"") then
+                        table.remove(arr)
+                        table.insert (arr, "Iptc4xmpCore:Location=\"" .. photo:getFormattedMetadata("location") .. "\"")
+                    end
+                    if string.match(line, "photoshop:State=\".*\"") then
+                        table.remove(arr)
+                        table.insert (arr, "photoshop:State=\"" .. photo:getFormattedMetadata("stateProvince") .. "\"")
+                    end
+                    if string.match(line, "photoshop:Country=\".*\"") then
+                        table.remove(arr)
+                        table.insert (arr, "photoshop:Country=\"" .. photo:getFormattedMetadata("country") .. "\"")
+                    end
+                    if string.match(line, "Iptc4xmpCore:CountryCode=\".*\"") then
+                        table.remove(arr)
+                        table.insert (arr, "Iptc4xmpCore:CountryCode=\"" .. photo:getFormattedMetadata("isoCountryCode") .. "\"")
+                    end
                 end
                 file:close()
                 if found_placeholder then
