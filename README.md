@@ -29,6 +29,9 @@ See also https://ocroquette.wordpress.com/migrating-from-lightroom-6-to-digikam-
    Enable "Read from sidecar files"
    Enable "Write to sidecar files"
    "Write to XMP sidecar for read-only items only" should be sufficient
+1. in Digikam, make sure that all metadata gets exported:
+   Preferences / Metadata / Behavior
+   Check all checkboxes in "Write This Information to the Metadata"
 1. in Digikam, add the tag "PLACEHOLDER_TAG" you want to add keywords from Lightroom to
    The PLACEHOLDER_TAG must be at the root of the tags
 1. in Digikam, select the relevant files, and trigger:
